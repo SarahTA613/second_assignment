@@ -7,21 +7,27 @@
 body{
     font-family: 'Poppins', sans-serif;
     color: #3A3A3A;
+    font-weight: 700;
     margin: 0;
 }
-
+.container{
+    width:1060px;
+    margin-bottom: 200px;
+}
 
 main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 800px;
+
+    
+    
 }
 
 /* influencer journey */
 .title{
     font-size: 24px;
-    margin-bottom: 0;
+    
     margin-top: 87px;
     margin-left: 120px;
    
@@ -31,12 +37,11 @@ main{
 
 .influencer-description{
     display: flex;
-    justify-content: center;
 }
 .about-to-be-influencer{
     width: 582px;
     height: 270px;
-    margin: 144px 88px 171px 130px
+    margin: 144px 88px 0 0;
     
 }
 .description{
@@ -66,7 +71,69 @@ main{
     text-decoration: none;
     color: #FFFFFF;
 }
-.icon-icon{
-    color: blanchedalmond;
+.button-icon{
+    margin-left: 8px;
+}
+/* popular collection section started from here */
+.collection-title{
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+.products{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap:20px ;
+    
+}
+.product{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.20);
+    border-radius: 5px;
+    padding: 15px;
+    width: 310px;
+    height: 476px;
+}
+.thumbnail img{
+    width: 300px;
+    height: 256px;
+    border-radius: 5px;
+
+}
+.product-name{
+    font-size: 28px;
+    font-weight: 500;
+}
+.price{
+    font-size: 24px;
+    
+}
+ion-icon.filled{
+    color:#FB8200;
+    font-size: 12px;
 }
 
+.rating{
+    color: #5E6366;
+    margin-left: 8px;
+    font-size: 14px;
+}
+.about-shifting{
+    color: #787885;
+    font-size: 14px;
+    margin: 0;
+}
+.see-more{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 0;
+    margin-top: 50px;
+    
+}
+.see-more a{
+    text-decoration: none;
+    color: #E02C6D;
+    font-size: 16px;
+    text-align:center;
+}
