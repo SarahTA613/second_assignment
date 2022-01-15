@@ -280,6 +280,12 @@ footer ion-icon{
         flex-direction: column;
         align-items: center;
     }
+    .about-to-be-influencer{
+        width: 350px;
+        height: 270px;
+        margin: 144px 88px 0 0;
+        
+    }
 
 }
 /* for desktop */
@@ -289,7 +295,7 @@ footer ion-icon{
         width: 100%;
     }
     .products{
-        grid-template-columns: repeat(3,fr);
+        grid-template-columns: repeat(3, minmax(200px 1fr));
     }
 
 }
