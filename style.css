@@ -7,7 +7,6 @@
 body{
     font-family: 'Poppins', sans-serif;
     color: #3A3A3A;
-    font-weight: 700;
     margin: 0;
 }
 .container{
@@ -24,19 +23,52 @@ main{
     
 }
 
-/* influencer journey */
-.title{
+/* <!-- start your journry as influencer --> */
+
+header h1{
     font-size: 24px;
-    
     margin-top: 87px;
     margin-left: 120px;
+    white-space:nowrap;
+    position: relative;
+    color: hsl(0, 0%, 100%);
+    width: 285px;
+    -webkit-text-stroke: 5px rgb(241, 239, 229) ;
+    text-transform: uppercase;
    
+}
+
+header h1::before{
+    content: attr(data-text);
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: #3A3A3A;
+    -webkit-text-stroke: 0px rgb(241, 239, 229);
+    border-right: 2px solid #3a3a3a;
+    overflow: hidden;
+    animation: animate 6s linear infinite;
+
+}
+@keyframes animate
+{
+    0%,10%,100%{
+        width: 0;
+
+    }
+    70%,90%,80%{
+        width: 100%;
+    }
+
 }
 
 
 
 .influencer-description{
     display: flex;
+    
 }
 .about-to-be-influencer{
     width: 582px;
@@ -53,7 +85,6 @@ main{
 .product-img img{
     width: 440px;
     height: 414px;
-    position: absolute;
     margin-top: 80px;
 }
 .booking{
@@ -67,13 +98,15 @@ main{
     height: 44px;
 
 }
-.booking a{
+.booking a ,ion-icon{
     text-decoration: none;
     color: #FFFFFF;
 }
 .button-icon{
     margin-left: 8px;
+    
 }
+
 /* popular collection section started from here */
 .collection-title{
     text-align: center;
@@ -131,9 +164,132 @@ ion-icon.filled{
     margin-top: 50px;
     
 }
-.see-more a{
+.see-more a, .arrow-colour{
     text-decoration: none;
     color: #E02C6D;
     font-size: 16px;
-    text-align:center;
+    
+}
+
+
+/* best equipment for influencer */
+
+.production-img img{
+    width: 404px;
+    height: 270px;
+}
+.inner-text{
+    width: 610px;
+    height: 224px;
+    margin-left: 96px;
+}
+.inner-text p{
+    color: #6C6C6C;
+    font-size: 16px;
+}
+.contact-button{
+    width: 155px;
+    height: 44px;
+    background-color: #E02C6D;
+    border: none;
+}
+.contact-button a ,ion-icon{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+/* footer section */
+footer{
+    width: 100%;
+    background-color: rgb(13, 13, 49);
+    height: 200px;
+    
+}
+.align{
+    text-align: center;
+}
+footer>div{
+    padding-top: 35px;
+}
+footer h1{
+    color: #FFFFFF;
+    font-size: 24px;
+    margin: 0;
+    
+    
+}
+
+footer h2,span{
+    font-size: 14px;
+    color: #FFFFFF ;
+    margin:0;
+    padding: 3px;
+    
+
+}
+footer ion-icon{
+    color: #FFFFFF;
+    font-size: 15px;
+    padding: 5px;
+}
+/* media queries */
+/* for mobile */
+@media only screen  and (max-width:576px)
+{
+    .container{
+        width: 100%;
+    }
+    .products{
+        
+        grid-template-columns: repeat(1, minmax(100px, 1fr));
+        align-items: center;
+    }
+    .influencer-description{
+        flex-direction: column;
+        align-items: center;
+    }
+    header h1{
+        text-align: left;
+    }
+    .about-to-be-influencer{
+        width: 300px;
+        height: 270px;
+        margin: 144px 88px 0 0;
+        
+    }
+    .product-img img ,.production-img img,.inner-text{
+        width: 90%;
+        
+        
+    }
+   
+    
+
+}
+/* for tablet */
+@media only screen and (min-width: 577px) and (max-width:768px)
+{
+    .container{
+        width: 100%;
+    }
+    .products{
+        grid-template-columns: repeat(2, minmax(100px, 1fr));
+    }
+    .influencer-description{
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+/* for desktop */
+@media only screen and (min-width: 769px) and (max-width:1280px)
+{
+    .container{
+        width: 100%;
+    }
+    .products{
+        grid-template-columns: repeat(3,fr);
+    }
+
 }
