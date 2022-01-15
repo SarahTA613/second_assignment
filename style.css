@@ -8,10 +8,13 @@ body{
     font-family: 'Poppins', sans-serif;
     color: #3A3A3A;
     margin: 0;
+    padding: 0;
+    width: 100%;
 }
 .container{
-    width:1060px;
+    min-height: 100%;
     margin-bottom: 200px;
+    
 }
 
 main{
@@ -68,12 +71,14 @@ header h1::before{
 
 .influencer-description{
     display: flex;
+    justify-content: space-around;
+    
     
 }
 .about-to-be-influencer{
-    width: 582px;
-    height: 270px;
-    margin: 144px 88px 0 0;
+    width: 50%;
+    height: 100%;
+    margin: 144px 88px 0 165px;
     
 }
 .description{
@@ -82,10 +87,15 @@ header h1::before{
     margin-top: 0;
     margin-bottom: 8px;
 }
+.product-img{
+    width: 50%;
+}
 .product-img img{
-    width: 440px;
-    height: 414px;
-    margin-top: 80px;
+    /* width: 440px; */
+    width: 80%;
+   
+
+    
 }
 .booking{
     background-color: #E02C6D;
@@ -173,15 +183,19 @@ ion-icon.filled{
 
 
 /* best equipment for influencer */
+.production-img{
+    width: 50%;
+    
+}
 
 .production-img img{
-    width: 404px;
-    height: 270px;
+    width: 70%;
+    
 }
 .inner-text{
-    width: 610px;
-    height: 224px;
-    margin-left: 96px;
+    width: 50%;
+    height: 100%;
+    
 }
 .inner-text p{
     color: #6C6C6C;
@@ -201,34 +215,38 @@ ion-icon.filled{
 
 /* footer section */
 footer{
-    width: 100%;
+    
     background-color: rgb(13, 13, 49);
     height: 200px;
+    margin: 0;
+    padding: 0;
+    min-width: 110px;
     
 }
 .align{
     text-align: center;
+    
 }
-footer>div{
+.footer{
     padding-top: 35px;
 }
-footer h1{
+.footer h1{
     color: #FFFFFF;
     font-size: 24px;
-    margin: 0;
+    
     
     
 }
 
-footer h2,span{
+.footer h2,span{
     font-size: 14px;
     color: #FFFFFF ;
-    margin:0;
+    
     padding: 3px;
     
 
 }
-footer ion-icon{
+.footer ion-icon{
     color: #FFFFFF;
     font-size: 15px;
     padding: 5px;
@@ -240,6 +258,7 @@ footer ion-icon{
     .container{
         width: 100%;
     }
+    
     .products{
         
         grid-template-columns: repeat(1, minmax(100px, 1fr));
@@ -250,25 +269,27 @@ footer ion-icon{
         align-items: center;
     }
     header h1{
-        text-align: left;
+        text-align: center;
+        margin-left: 10px;
     }
-    .about-to-be-influencer{
-        width: 300px;
-        height: 270px;
-        margin: 144px 88px 0 0;
-        
-    }
+    
     .product-img img ,.production-img img,.inner-text{
         width: 90%;
         
         
+    }
+    .about-to-be-influencer{
+        margin:144px 20px 0 20px
+    }
+    footer{
+        height: 200px;
     }
    
     
 
 }
 /* for tablet */
-@media only screen and (min-width: 577px) and (max-width:768px)
+@media only screen and (min-width: 577px) and (max-width:825px)
 {
     .container{
         width: 100%;
@@ -280,16 +301,12 @@ footer ion-icon{
         flex-direction: column;
         align-items: center;
     }
-    .about-to-be-influencer{
-        width: 350px;
-        height: 270px;
-        margin: 144px 88px 0 0;
-        
-    }
+    
+    
 
 }
 /* for desktop */
-@media only screen and (min-width: 769px) and (max-width:1280px)
+@media only screen and (min-width: 826px) and (max-width:1280px)
 {
     .container{
         width: 100%;
